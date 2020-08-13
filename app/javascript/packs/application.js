@@ -16,3 +16,5 @@ import 'bootstrap';
 //
 // const images = require.context('../images', true)
 // const imagePath = (name) => images(name, true)
+
+rails generate model Dose description:string cocktail:references ingredient:references
