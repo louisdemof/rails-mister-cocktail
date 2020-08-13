@@ -1,0 +1,14 @@
+<h2><%= @cocktail.name %></h2>
+
+<% @cocktail.doses.each do |dose| %>
+<p><%= dose.ingredient.name %> | <%= dose.description %></p>
+<hr>
+
+
+<% end %>
+
+
+<%= button_to "Add a new ingredient", new_cocktail_dose_path(@cocktail),
+    :class => "btn btn-primary", :method => :get %>
+<%= button_to "Navigate back to the menu", cocktails_path(@cocktails),
+    :class => "btn btn-link", :method => :get %>
