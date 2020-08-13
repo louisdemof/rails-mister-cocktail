@@ -1,7 +1,11 @@
 <h2><%= @cocktail.name %></h2>
 
 <% @cocktail.doses.each do |dose| %>
-<p><%= dose.ingredient.name %> | <%= dose.description %></p>
+<p>
+  <%= dose.ingredient.name %> | <%= dose.description %>
+  <%= button_to "Delete this dose", dose_path(dose),
+    :class => "btn btn-link", :method => :delete %>
+</p>
 <hr>
 
 
