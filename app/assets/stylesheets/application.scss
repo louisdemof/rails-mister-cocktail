@@ -14,13 +14,14 @@
 
 
 
-$gray: #F4F4F4;
-$spacer: 8px;
+
+
+
 
 
 body {
-  background: $gray; // Using this variable
-  font-family: 'Montserrat', sans-serif;
+  background: #white;
+  font-family: 'Quicksand', sans-serif;
 }
 
 .btn {
@@ -29,7 +30,11 @@ body {
 
 
 h1{
-  font-family: 'Bangers', cursive;
+  font-family: 'Cabin Condensed', sans-serif;
+}
+
+h2{
+  font-family: 'Cabin Condensed', sans-serif;
 }
 
 a {
@@ -41,5 +46,6 @@ a {
 }
 
 .container {
+  text-align: center;
 
 }

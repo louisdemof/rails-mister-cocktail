@@ -8,9 +8,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
   </head>
 
   <body>
+  <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <%= link_to "#", class: "navbar-brand" do %>
+    <%= image_tag("mixozax.png") %>
+  <% end %>
+
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <img src=""./assets/images/mixozax">
+
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <%= link_to "Home", cocktails_path(@cocktails),  class: "nav-link" %>
+      </li>
+      <li class="nav-item">
+        <%= link_to "New Creation", new_cocktail_path(@cocktails) , class: "nav-link"%>
+      </li>
+    </ul>
+  </div>
+</div>
+
+
     <%= yield %>
   </body>
 </html>

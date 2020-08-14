@@ -1,9 +1,12 @@
-<h1>All cocktails</h1>
+<div class="menu-top">
+  <h1>All cocktails</h1>
+</div>
+<div class="container">
 <ul>
   <% @cocktails.each do |cocktail| %>
     <li><%= link_to cocktail.name, cocktail_path(cocktail)%></li>
   <% end %>
   <%= button_to "Create a new cocktail", new_cocktail_path(@cocktails),
-    :class => "btn-primary", :method => :get %>
+    class: "btn btn-flat", :method => :get %>
 </ul>
-
+</div>
