@@ -2,11 +2,18 @@
   <h1>All cocktails</h1>
 </div>
 <div class="container">
-<ul>
-  <% @cocktails.each do |cocktail| %>
-    <li><%= link_to cocktail.name, cocktail_path(cocktail)%></li>
-  <% end %>
-  <%= button_to "Create a new cocktail", new_cocktail_path(@cocktails),
-    class: "btn btn-flat", :method => :get %>
-</ul>
+  <div class="row">
+    <% @cocktails.each do |cocktail| %>
+      <div class="col-6 col-md-4 col-lg-3 mx-0">
+        <%= link_to (cocktail) do %>
+          <div class="card-category my-3" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= cl_image_path(cocktail.photo.key) %>)">
+          <%= cocktail.name %>
+          </div>
+        <% end %>
+      </div>
+    <% end %>
+  </div>
 </div>
+
+  <%= button_to "Create a new cocktail", new_cocktail_path(@cocktails),
+    class: "btn-flat", :method => :get %>
