@@ -11,14 +11,14 @@ Cocktail.destroy_all
 Ingredient.destroy_all
 puts 'database is clean'
 puts 'creating Ingredients'
-Ingredient.create(name: "lemon")
-Ingredient.create(name: "ice")
-Ingredient.create(name: "rum")
-Ingredient.create(name: "lime juice")
-Ingredient.create(name: "syrup")
-Ingredient.create(name: "gin")
-Ingredient.create(name: "tonic")
-Ingredient.create(name: "Cognac" )
+Ingredient.create(name: "Lemon")
+Ingredient.create(name: "Ice")
+Ingredient.create(name: "Rum")
+Ingredient.create(name: "Lime juice")
+Ingredient.create(name: "Syrup")
+Ingredient.create(name: "Gin")
+Ingredient.create(name: "Tonic")
+Ingredient.create(name: "Cognac")
 Ingredient.create(name: "Coca Cola")
 Ingredient.create(name: "Aperol")
 Ingredient.create(name: "Spritz")

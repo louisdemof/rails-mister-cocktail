@@ -11,3 +11,35 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+
+
+$gray: #F4F4F4;
+$spacer: 8px;
+
+
+body {
+  background: $gray; // Using this variable
+  font-family: 'Montserrat', sans-serif;
+}
+
+.btn {
+  padding: $spacer ($spacer * 3);
+}
+
+
+h1{
+  font-family: 'Bangers', cursive;
+}
+
+a {
+  color: #ea907a;
+
+  &:hover {
+    color: #4f8a8b;
+  }
+}
+
+.container {
+
+}
