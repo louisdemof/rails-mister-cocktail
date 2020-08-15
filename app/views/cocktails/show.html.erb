@@ -12,3 +12,11 @@
 <%= button_to "Add a new ingredient", new_cocktail_dose_path(@cocktail),
     :class => "btn-flat", :method => :get %>
 </div>
+
+<%= link_to 'Leave a review', new_cocktail_review_path(@cocktail) %>
+ <p><% @cocktail.reviews.each do |r| %>
+<h2><%="Reviews"%></h2>
+  <%= "⭐" * r.rating   %><%= " | " %><%= r.content %>
+   <% end %>
+</p>
+
