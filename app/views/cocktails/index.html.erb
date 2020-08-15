@@ -1,6 +1,9 @@
 <div class="menu-top">
-  <h1>All cocktails</h1>
+  <h1>All Creations</h1>
 </div>
+<p class="dropdown_sentence">
+  <span id="banner-typed-text"></span>
+</p>
 <div class="container">
   <div class="row">
     <% @cocktails.each do |cocktail| %>
@@ -13,7 +16,8 @@
       </div>
     <% end %>
   </div>
+  <%= button_to "Create a new cocktail", new_cocktail_path(@cocktails),
+  class: "btn-flat", :method => :get %>
 </div>
 
-  <%= button_to "Create a new cocktail", new_cocktail_path(@cocktails),
-    class: "btn-flat", :method => :get %>
+
