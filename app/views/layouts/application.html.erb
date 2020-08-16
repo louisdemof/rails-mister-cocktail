@@ -9,6 +9,7 @@
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
     <link href="https://fonts.googleapis.com/css2?family=Cabin+Condensed:wght@600&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
   </head>
 
   <body>
@@ -38,5 +39,14 @@
 
 
     <%= yield %>
+<div class="footer">
+  <div class="footer-links">
+    <a href="https://github.com/louisdemof"><i class="fab fa-github"></i></a>
+    <a href="https://www.instagram.com/cocktails/"><i class="fab fa-instagram"></i></a>
+  </div>
+  <div class="footer-copyright">
+    This website was made with <i class="fas fa-heart"></i> by Zax
+  </div>
+</div>
   </body>
 </html>

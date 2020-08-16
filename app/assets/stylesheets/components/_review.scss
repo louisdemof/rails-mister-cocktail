@@ -1,0 +1,90 @@
+.review-block {
+  background-color: #ea907a;
+  text-align: center;
+
+  & h2 {
+    color: white;
+  }
+
+  & p {
+    color: white;
+  }
+}
+
+.reviews {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 16px;
+}
+
+.review-category {
+  background-size: cover;
+  background-position: center;
+  height: 130px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 18px;
+  border-radius: 5px;
+  margin-bottom: 30px;
+  border-style: solid;
+  border-width: 1px;
+}
+
+.emoji {
+  font-size: 30px;
+  text-align: center;
+}
+
+
+// Code for advanced rating system. still need to be implemented
+
+.rating {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) rotateY(180deg);
+  display: flex;
+}
+
+.rating input {
+  display: none;
+}
+
+.rating label {
+  display: block;
+  cursor: pointer;
+  width: 50 px;
+  background: none;
+  color:grey
+}
+
+.rating label:before{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: relative;
+  display: block;
+  font-size: 20px;
+  color: #white;
+}
+
+.rating label:after{
+  content: '\f005';
+  font-family: fontAwesome;
+  position: absolute;
+  display: block;
+  font-size: 20px;
+  color: #4f8a8b;
+  top: 0;
+  opacity: 0;
+  transition: .5s;
+  text-shadow: 0 2px 5px rgba(0,0,0,.5);
+}
+
+.rating label:hover:after,
+.rating label:hover ~ label:after,
+.rating input:checked ~ label:after
+{
+  opacity: 1;
+}
