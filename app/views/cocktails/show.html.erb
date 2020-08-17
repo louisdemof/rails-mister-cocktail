@@ -10,11 +10,11 @@
   <% end %>
 <div class="container">
   <div class="item">
-    <%= button_to "Add a new ingredient", new_cocktail_dose_path(@cocktail),
+    <%= link_to "Add a new ingredient", new_cocktail_dose_path(@cocktail),
     :class => "btn-flat", :method => :get %>
   </div>
   <div>
-    <%= button_to 'Leave a review', new_cocktail_review_path(@cocktail),
+    <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail),
     :class => "btn-flat" %>
   </div>
 </div>
