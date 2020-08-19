@@ -2,13 +2,11 @@
 
 <div class="container">
     <%= simple_form_for(@cocktail)  do |f| %>
-    <div class="form">
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    </div>
-    <div class="width">
-    <%= f.input :photo, as: :file %>
-    <%= f.submit"Submit Cocktail", class: "btn-flat"%>
+    <div >
+    <%= f.input :name %>
+    <%= f.input :photo, as: :file, label: "Add a picture for your cocktail!" %>
+    <%= f.submit"Submit Cocktail", class: "btn-flat w-100"%>
     </div>
   <% end %>
 </div>
+
