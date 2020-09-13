@@ -1,35 +1,36 @@
-<h2 class="menu-top"><%= @cocktail.name %></h2>
-<div class="align">
-  <% @cocktail.doses.each do |dose| %>
-    <p>
-      <%= dose.ingredient.name %> | <%= dose.description %>
-      <%= button_to "Delete this dose", dose_path(dose),
-      :class => "btn-small", :method => :delete %>
-    </p>
-    <hr>
-  <% end %>
-<div class="container">
-  <div class="item">
-    <%= link_to "Add a new ingredient", new_cocktail_dose_path(@cocktail),
-    :class => "btn-flat", :method => :get %>
-  </div>
-  <div>
-    <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail),
-    :class => "btn-flat" %>
-  </div>
-</div>
-</div>
-
-<div class="review-block">
-  <h2 class="menu-top"><%="Reviews"%></h2>
-    <div class="reviews">
-    <% @cocktail.reviews.each do |r| %>
-        <div class="review-category">
-          <%= "★" * r.rating   %> <br><%= r.content %>
-        </div>
-      <% end %>
+  <h2 class="menu-top"><%= @cocktail.name %></h2>
+ <div class="mx-4">
+  <div class="align">
+    <% @cocktail.doses.each do |dose| %>
+      <p>
+        <%= dose.ingredient.name %> | <%= dose.description %>
+        <%= button_to "Delete this dose", dose_path(dose),
+        :class => "btn-small", :method => :delete %>
+      </p>
+      <hr>
+    <% end %>
+  <div class="container">
+    <div class="item">
+      <%= link_to "Add a new ingredient", new_cocktail_dose_path(@cocktail),
+      :class => "btn-flat", :method => :get %>
     </div>
+    <div>
+      <%= link_to 'Leave a review', new_cocktail_review_path(@cocktail),
+      :class => "btn-flat" %>
+    </div>
+  </div>
+  </div>
 </div>
 
+  <div class="review-block">
+    <h2 class="menu-top"><%="Reviews"%></h2>
+      <div class="reviews">
+      <% @cocktail.reviews.each do |r| %>
+          <div class="review-category">
+            <%= "★" * r.rating   %> <br><%= r.content %>
+          </div>
+        <% end %>
+      </div>
+  </div>
 
 
