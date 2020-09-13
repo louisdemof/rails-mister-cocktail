@@ -23,8 +23,14 @@ Ingredient.create(name: "Coca Cola")
 Ingredient.create(name: "Aperol")
 Ingredient.create(name: "Spritz")
 Ingredient.create(name: "Prosecco")
+Ingredient.create(name: "Espresso")
+Ingredient.create(name: "Martini")
+Ingredient.create(name: "Passion fruit")
+Ingredient.create(name: "Passoa")
+Ingredient.create(name: "Sugar Syrup")
+Ingredient.create(name: "Pineapple")
+Ingredient.create(name: "Orange")
+Ingredient.create(name: "Strawberry")
+
 puts 'creating Cocktails'
-Cocktail.create(name: "Aperol Spritz")
-Cocktail.create(name: "Mojito")
-Cocktail.create(name: "Rom Coke")
 puts 'done'

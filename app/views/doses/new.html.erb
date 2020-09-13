@@ -1,8 +1,10 @@
-<div class="align">
-  <h1 class="menu-top">Add ingredients to your creation</h1>
-  <%= simple_form_for [@cocktail, @dose] do |f| %>
-    <%= f.association :ingredient %>
-    <%= f.input :description %>
-    <%= f.button :submit , class: "btn-flat"%>
-  <% end %>
+<div class="container">
+  <div class="align">
+    <h1 class="menu-top">Add ingredients to your creation</h1>
+    <%= simple_form_for [@cocktail, @dose] do |f| %>
+      <%= f.association :ingredient %>
+      <%= f.input :description %>
+      <%= f.button :submit , class: "btn-flat"%>
+    <% end %>
+  </div>
 </div>
